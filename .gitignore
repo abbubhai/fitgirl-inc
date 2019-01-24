@@ -60,6 +60,7 @@ local_settings.py
 settings.py
 empoweru/settings.py
 empoweru/settings.*
+empoweru/local_settings.py
 db.sqlite3
 **/migrations/
 
