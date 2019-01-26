@@ -13,6 +13,18 @@
         {% if form %}
             <div>{{ page.intro|richtext }}</div>
             <div class="container">
+                                    <div class="clock"></div>
+
+                        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    let clock = $('.clock').FlipClock(1800, {
+		countdown: true,
+        clockFace: 'MinuteCounter',
+
+    })});
+</script>
                 <div class="row">
                     <div class="col-sm-9">
                         <ul class="nav nav-pills">
@@ -42,8 +54,10 @@
 
                     <div class="col-sm-3">
                     <br>
+
                     <br>
                 <span id="countdown" style="display: block; font-size: 4.5rem; position: fixed">
+
 
                     <button class="btn-fitgirl" id="startClock"
                             style="font-size: 30%"><i class="fa fa-clock-o" aria-hidden="true"></i> Start your 30 Minutes Timer</button>
