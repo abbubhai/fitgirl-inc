@@ -8,10 +8,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 #import django_heroku
 import os
-from decouple import config
-import os
-
-
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +23,7 @@ SECRET_KEY = 'xz@m8r3&j2kh@t+9^rxmrbvg+-c4dv5$_&*ru2d1n1jf$3(l_-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost','.herokuapp.com','www.empoweruomaha.com','cat.empoweruomaha.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -63,7 +59,6 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'wagtailmenus',
     'crispy_forms',
-    'storages',
 ]
 
 MIDDLEWARE = [
@@ -106,7 +101,27 @@ WSGI_APPLICATION = 'empoweru.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd4br3qegmoba7s',
+#         'USER': 'vlpfizeviactfl',
+#         'PASSWORD': 'b618444e9e0c19346e23551420366942ed762f9b7d42024736cda9aebfbb5d6f',
+#         'HOST': 'ec2-23-21-171-249.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
+
+
+# # ## Local Setting
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -199,11 +214,11 @@ LOGOUT_URL = 'logout'
 WAGTAIL_SITE_NAME = 'EmpowerU'
 
 
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'capstone18FA'
+EMAIL_HOST_PASSWORD = 'Isqa8950-002'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -218,4 +233,11 @@ try:
     from empoweru.local_settings import *
 except ImportError:
     raise Exception("A local_settings.py file is required to run this project")
+
+# try:
+#     from local_settings import *
+# except ImportError:
+#     pass
+
+
 
