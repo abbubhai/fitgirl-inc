@@ -23,7 +23,6 @@ grappelli-safe==0.5.1
 gunicorn==19.9.0
 html5lib==1.0.1
 idna==2.7
-Mezzanine==4.3.1
 oauthlib==2.1.0
 Pillow==5.2.0
 psycopg2==2.7.5
@@ -41,7 +40,6 @@ whitenoise==4.1
 Willow==1.1
 django-crispy-forms==1.7.2
 boto3==1.9.57
-
 django-storages==1.7.1
 python-decouple==3.1
 django-compressor
