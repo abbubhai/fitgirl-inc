@@ -1,7 +1,6 @@
 # fitgirl-inc
 FitGirl Inc
-
-The official repository of the FitGirl EmpowerU Project for Fall 2018 Capstone Class
+This application is built in Python using django framework with an integrated cms. 
 Written in Python/Django
 * Python Version 3.6
 * Django Version 2.0.8
