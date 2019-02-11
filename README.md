@@ -1,7 +1,8 @@
 # fitgirl-inc
 FitGirl Inc
-This application is built in Python using django framework with an integrated cms. 
-Written in Python/Django
+
+This application is built in Python using django framework with an integrated cms 'wagtail'. 
+
 * Python Version 3.6
 * Django Version 2.0.8
 * Virtual Environment Version 16.0.0
